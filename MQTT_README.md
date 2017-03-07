@@ -439,7 +439,8 @@ See [full example](#full-example)
 ##on receive
 
 ```javascript
-mqtt_client.on('received', function (Integer message_id, String topic, Buffer buffer, Ineteger qos, Boolean retain))
+mqtt_client.on('received',
+		 function (Integer message_id, String topic, Buffer buffer, Ineteger qos, Boolean retain))
 ```
 
 **Description**
