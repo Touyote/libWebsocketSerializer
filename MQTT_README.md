@@ -5,12 +5,12 @@
 ```javascript
 var mqtt_client = new mqtt(String client_id, String user_name, String user_pass,
     		      		   Boolean clean_session, Number keep_alive_time, Boolean asynchronous,
-				   	      function callbackConnect(...),
-				   	      function callbackDisconnect(...),
-				   	      function callbackSubscribe(...),
-				   	      function callbackUnsubscribe(...),
-				   	      function callbackPublish(...),
-				   	      function callbackReceive(...));
+				   	      function callbackConnect(args),
+				   	      function callbackDisconnect(args),
+				   	      function callbackSubscribe(args),
+				   	      function callbackUnsubscribe(args),
+				   	      function callbackPublish(args),
+				   	      function callbackReceive(args));
 ```
 
 **Description**
