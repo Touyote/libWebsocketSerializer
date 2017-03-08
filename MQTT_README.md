@@ -5,12 +5,13 @@
 ```javascript
 var mqtt_client = new mqtt(String client_id, String user_name, String user_pass,
     		      		   Boolean clean_session, Number keep_alive_time, Boolean asynchronous,
-				   	      function callbackConnect(String result),
-				   	      function callbackDisconnect(String result),
-				   	      function callbackSubscribe(Integer message_id),
-				   	      function callbackUnsubscribe(Integer message_id),
-				   	      function callbackPublish(Integer message_id),
-				   	      function callbackReceive(Integer message_id, String topic, Buffer buffer, Ineteger qos, Boolean retain));
+				   	       function callbackConnect(String result),
+				   	       function callbackDisconnect(String result),
+				   	       function callbackSubscribe(Integer message_id),
+				   	       function callbackUnsubscribe(Integer message_id),
+				   	       function callbackPublish(Integer message_id),
+				   	       function callbackReceive(Integer message_id, String topic, Buffer buffer,
+					       					   Integer qos, Boolean retain));
 ```
 
 **Description**
@@ -466,7 +467,7 @@ See [full example](#full-example)
 
 ```javascript
 mqtt_client.on('received',
-			   function (Integer message_id, String topic, Buffer buffer, Ineteger qos, Boolean retain))
+			   function (Integer message_id, String topic, Buffer buffer, Integer qos, Boolean retain))
 ```
 
 **Description**
