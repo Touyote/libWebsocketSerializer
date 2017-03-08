@@ -27,17 +27,17 @@ Create and configure a new mqtt client object.
  - *Number*: keep_alive_time in milliseconds.
  - *Boolean*: asynchronous let the mqtt client to be non-blocking.
  - *function*: callbackConnect call every time the client succeed to connect to the broker.
-   	       For more details see [on_connect](#on_connect).
+   For more details see [on_connect](#on_connect).
  - *function*: callbackDisconnect call every time the client succeed to disconnect from the broker.
-   	       For more details see [on_disconnect](#on_disconnect).
+   For more details see [on_disconnect](#on_disconnect).
  - *function*: callbackSubscribe call every time the client succeed to subscribe to a topic.
-   	       For more details see [on_subscribe](#on_subcribe).
+   For more details see [on_subscribe](#on_subcribe).
  - *function*: callbackSubscribe call every time the client succeed to unsubscribe from a topic.
-   	       For more details see [on_unsubscribe](#on_unsubcribe).
+   For more details see [on_unsubscribe](#on_unsubcribe).
  - *function*: callbackPublish call every time the client succeed to publish a message.
-   	       For more details see [on_publish](#on_publish).
+   For more details see [on_publish](#on_publish).
  - *function*: callbackReceive call every time the client receives a message.
-   	       For more details see [on_receive](#on_receive).
+   For more details see [on_receive](#on_receive).
 
 **Return value**
 
@@ -258,7 +258,7 @@ Connect to an MQTT broker. This is a non-blocking call.
  - *String*: host of the remote broker.
  - *Integer*: port of the remote broker.
  - *function*: callback is call every time the client succeed to connect to the remote broker.
-   	       For more details see [on_connect](#on_connect).
+   For more details see [on_connect](#on_connect).
 
 **Return value**
 
@@ -281,7 +281,7 @@ Disconnect from the broker.
 **Parameters**
 
  - *function*: callback is call every time the client is disconnecting from the broker.
-   	       For more details see [on_disconnect](#on_disconnect).
+   For more details see [on_disconnect](#on_disconnect).
 
 **Return value**
 
@@ -306,7 +306,7 @@ Subscribe to a topic.
  - *Integer*: qos is the quality of service (0, 1 or 2 are the indicators of quality).
  - *String*: topic to wich we will publish the message.
  - *function*: callback is call every time the client succeed to register to a topic.
-   	       For more details see [on_subscribe](#on_subscribe).
+   For more details see [on_subscribe](#on_subscribe).
 
 **Return value**
 
@@ -330,7 +330,7 @@ Unsubscribe from a topic.
 
  - *String*: topic to wich we will publish the message.
  - *function*: callback is call every time the client succeed to unsubscribe from a topic.
-   	       For more details see [on_unsubscribe](#on_unsubscribe).
+   For more details see [on_unsubscribe](#on_unsubscribe).
 
 **Return value**
 
@@ -359,9 +359,9 @@ Publish a message on a given topic.
  - *String*: topic to wich we will publish the message.
  - *Buffer*: message to publish on the topic.
  - *function*: callbackPublish is call every time the client succeed to send a message.
-   	       For more details see [on_publish](#on_publish).
+   For more details see [on_publish](#on_publish).
  - *function*: callbackReceive is call every time the client received a message from the broker.
-   	       For more details see [on_receive](#on_receive).
+   For more details see [on_receive](#on_receive).
 
 **Return value**
 
