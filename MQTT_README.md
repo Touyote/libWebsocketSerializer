@@ -294,7 +294,10 @@ See [full example](#full-example)
 ##subscribe
 
 ```javascript
-Number subscribe(Integer qos, String topic, function callback(Integer mid))
+Number subscribe(Integer qos, String topic,
+       			    function callbackSubscribe(Integer mid),
+			    function callbackReceive(Integer mid, String topic, Buffer message,
+			    	     			        Integer qos, Boolean retain))
 ```
 
 **Description**
@@ -305,8 +308,10 @@ Subscribe to a topic.
 
  - *Integer*: qos is the quality of service (0, 1 or 2 are the indicators of quality).
  - *String*: topic to wich we will publish the message.
- - *function*: callback is call every time the client succeed to register to a topic.
+ - *function*: callbackSubscribe is call every time the client succeed to register to a topic.
    For more details see [on_subscribe](#on_subscribe).
+ - *function*: callbackReceive is call every time the client received a message from the broker.
+   For more details see [on_receive](#on_receive).
 
 **Return value**
 
@@ -344,8 +349,7 @@ See [full example](#full-example)
 
 ```javascript
 Number publish(Integer qos, Boolean retain, String topic, Buffer message,
-       		   function callbackPublish(Integer mid),
-       		   function callbackReceive(Integer mid, String topic, Buffer message, Integer qos, Boolean retain))
+       		   function callback(Integer mid))
 ```
 
 **Description**
@@ -358,10 +362,8 @@ Publish a message on a given topic.
  - *Boolean*: retain permits to tell to the broker to keep the last message.
  - *String*: topic to wich we will publish the message.
  - *Buffer*: message to publish on the topic.
- - *function*: callbackPublish is call every time the client succeed to send a message.
+ - *function*: callback is call every time the client succeed to send a message.
    For more details see [on_publish](#on_publish).
- - *function*: callbackReceive is call every time the client received a message from the broker.
-   For more details see [on_receive](#on_receive).
 
 **Return value**
 
