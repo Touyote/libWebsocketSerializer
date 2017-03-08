@@ -469,7 +469,7 @@ See [full example](#full-example)
 
 ```javascript
 mqtt_client.on('received', function (Integer message_id, String topic, Buffer buffer,
-									Integer qos, Boolean retain))
+									 Integer qos, Boolean retain))
 ```
 
 **Description**
