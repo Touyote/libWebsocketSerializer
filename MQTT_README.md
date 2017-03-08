@@ -297,7 +297,7 @@ See [full example](#full-example)
 Number subscribe(Integer qos, String topic,
        			 function callbackSubscribe(Integer mid),
 			     function callbackReceive(Integer mid, String topic, Buffer message,
-			    	     			     Integer qos, Boolean retain))
+			    	     			      Integer qos, Boolean retain))
 ```
 
 **Description**
@@ -468,8 +468,8 @@ See [full example](#full-example)
 ##on_receive
 
 ```javascript
-mqtt_client.on('received',
-			   function (Integer message_id, String topic, Buffer buffer, Integer qos, Boolean retain))
+mqtt_client.on('received', function (Integer message_id, String topic, Buffer buffer,
+			   	       Integer qos, Boolean retain))
 ```
 
 **Description**
