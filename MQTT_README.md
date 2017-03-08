@@ -4,7 +4,13 @@
 
 ```javascript
 var mqtt_client = new mqtt(String client_id, String user_name, String user_pass,
-    		      		   Boolean clean_session, Number keep_alive_time, Boolean asynchronous);
+    		      		   Boolean clean_session, Number keep_alive_time, Boolean asynchronous,
+				   function callbackConnect(...),
+				   function callbackDisconnect(...),
+				   function callbackSubscribe(...),
+				   function callbackUnsubscribe(...),
+				   function callbackPublish(...),
+				   function callbackReceive(...));
 ```
 
 **Description**
@@ -19,6 +25,12 @@ Create and configure a new mqtt client object.
  - *Boolean*: clean_session permits to delete all the message when the client is disconnected.
  - *Number*: keep_alive_time in milliseconds.
  - *Boolean*: asynchronous let the mqtt client to be non-blocking.
+ - *function*: callbackConnect call every time the client succeed to connect to the broker. For more details see [on_connect](#on_connect).
+ - *function*: callbackDisconnect call every time the client succeed to disconnect from the broker. For more details see [on_disconnect](#on_disconnect).
+ - *function*: callbackSubscribe call every time the client succeed to subscribe to a topic. For more details see [on_subscribe](#on_subcribe).
+ - *function*: callbackSubscribe call every time the client succeed to unsubscribe from a topic. For more details see [on_unsubscribe](#on_unsubcribe).
+ - *function*: callbackPublish call every time the client succeed to publish a message. For more details see [on_publish](#on_publish).
+ - *function*: callbackReceive call every time the client receives a message. For more details see [on_receive](#on_receive).
 
 **Return value**
 
@@ -346,6 +358,8 @@ Publish a message on a given topic.
 
 See [full example](#full-example)
 
+#Events
+
 ##on_connect
 
 ```javascript
@@ -436,7 +450,7 @@ Called every time when the mqtt client succeed to publish a message on a topic.
 
 See [full example](#full-example)
 
-##on receive
+##on_receive
 
 ```javascript
 mqtt_client.on('received',
