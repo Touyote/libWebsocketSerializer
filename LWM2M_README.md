@@ -26,8 +26,8 @@ See [full example](#full-example)
 
 ```javascript
 String client_connect(Integer id, String uri, String name,
-				   Number lifetime, String json_objects,
-				   String psk_id, String psk_key)
+				      Number lifetime, String json_objects,
+				      String psk_id, String psk_key)
 ```
 
 **Description**
