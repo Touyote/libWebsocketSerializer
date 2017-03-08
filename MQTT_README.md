@@ -297,7 +297,7 @@ See [full example](#full-example)
 Number subscribe(Integer qos, String topic,
        			    function callbackSubscribe(Integer mid),
 			    function callbackReceive(Integer mid, String topic, Buffer message,
-			    	     			        Integer qos, Boolean retain))
+			    	     			     Integer qos, Boolean retain))
 ```
 
 **Description**
