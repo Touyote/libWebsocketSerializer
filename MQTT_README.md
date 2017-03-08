@@ -11,7 +11,7 @@ var mqtt_client = new mqtt(String client_id, String user_name, String user_pass,
 				   	       function callbackUnsubscribe(Integer message_id),
 				   	       function callbackPublish(Integer message_id),
 				   	       function callbackReceive(Integer message_id, String topic, Buffer buffer,
-					       					   Integer qos, Boolean retain));
+					       						       Integer qos, Boolean retain));
 ```
 
 **Description**
